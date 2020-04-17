@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import { Router, Stack, Scene, } from 'react-native-router-flux';
 
 import {
-    SplashToOnboarding
+    SplashToOnboarding,
+    Authentication
+
 } from './../screens/';
 
 class Navigation extends Component {
@@ -10,8 +12,8 @@ class Navigation extends Component {
         return (
             <Router>
                 <Stack key="root">
-                    <Scene key="splash" component={ SplashToOnboarding } hideNavBar={ true }  initial={true}/>
-                    
+                    <Scene key="splashToOnboarding" component={ SplashToOnboarding } hideNavBar={ true }  initial={true}/>
+                    <Scene key="authentication" hideNavBar={ true } component={ Authentication } />
                 </Stack>
             </Router>
         )
