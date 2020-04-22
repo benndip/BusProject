@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         elevation: 12,
         padding: 20,
-        borderRadius: 8
+        borderRadius: 5
     }
 })
 export default styles

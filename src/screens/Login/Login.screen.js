@@ -1,19 +1,34 @@
-import React from 'react'
-import { View, ScrollView, Text } from 'react-native'
+import React, { useState } from 'react'
+import { View, Text, ScrollView, TouchableOpacity } from 'react-native'
+import Icon from 'react-native-vector-icons/AntDesign'
 
+import theme from '../../theme'
 import styles from './Login.styles'
-import { Card, MyInput } from '../../components/'
- 
+import { Card, MyInput, MyAuthButton } from '../../components'
+
 const Login = () => {
+
+    const [termAndCondition, setTermAndCondition] = useState(false);
+    const [isPasswordShown, setIsPasswordShown] = useState(false);
+
+    const changeTermAndCondition = () => {
+        setTermAndCondition(!termAndCondition)
+    }
+
     return (
         <Card style={styles.card}>
-            <ScrollView>
-                <View style={styles.inputsView}>
-                    <MyInput />
-                    <MyInput />
-
-                </View>
-            </ScrollView>
+            <MyInput
+                iconName='mail'
+                placeholder='Email'
+            />
+            <MyInput
+                iconName='key'
+                placeholder='password'
+                makeSecured
+            />
+            <MyAuthButton
+                buttonName='LOGIN'
+            />
         </Card>
     )
 }

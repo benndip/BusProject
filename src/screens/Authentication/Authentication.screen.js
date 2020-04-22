@@ -8,42 +8,44 @@ import { Login, Signup } from '../index'
 
 const Authentication = () => {
 
-    const [showLogin, setShowLogin] = useState(true)
-    const [showSignup, setShowSignup] = useState(false)
+    const [showLogin, setShowLogin] = useState(false)
+    const [showSignup, setShowSignup] = useState(true)
 
-    const changeLogin = () =>{
+    const changeLogin = () => {
         setShowLogin(true)
         setShowSignup(false)
     }
 
-    const changeSignup = () =>{
+    const changeSignup = () => {
         setShowSignup(true)
         setShowLogin(false)
     }
 
     return (
         <View style={styles.container}>
-            <StatusBar translucent backgroundColor={theme.SECONDARY_COLOR}/>
+            <StatusBar translucent backgroundColor={theme.SECONDARY_COLOR} />
             <Header
                 title="Account"
             >
                 <View style={styles.headerView}>
                     <TouchableOpacity
-                        onPress={changeLogin}
-                        style={[styles.touch,{ borderBottomWidth: showLogin ? 5 : 0 }]}
-                    >
-                        <Text style={styles.text}>Login</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity
                         onPress={changeSignup}
-                        style={[styles.touch,{ borderBottomWidth: showSignup ? 5 : 0 }]}
+                        style={[styles.touch, { borderBottomWidth: showSignup ? 5 : 0 }]}
                     >
                         <Text style={styles.text}>Signup</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                        onPress={changeLogin}
+                        style={[styles.touch, { borderBottomWidth: showLogin ? 5 : 0 }]}
+                    >
+                        <Text style={styles.text}>Login</Text>
                     </TouchableOpacity>
                 </View>
             </Header>
             <View style={styles.belowHeaderView} />
-            { showLogin ? <Login /> : <Signup /> }
+            <ScrollView>
+                    {showLogin ? <Login /> : <Signup />}
+            </ScrollView>
         </View>
     )
 }
