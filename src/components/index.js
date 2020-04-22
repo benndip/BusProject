@@ -2,10 +2,12 @@ import MyInput from "./MyInput/MyInput.component";
 import Header from './Header/Header.component'
 import Card from './Card/Card.component'
 import MyAuthButton from './MyAuthButton/MyAuthButton.component'
+import TabIcon from './TabIcon/TabIcon.component'
 
 export {
     MyInput,
     Header,
     Card,
-    MyAuthButton
+    MyAuthButton,
+    TabIcon
 }

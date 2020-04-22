@@ -10,7 +10,6 @@ import { Card, MyInput, MyAuthButton } from '../../components'
 const Signup = () => {
 
     const [termAndCondition, setTermAndCondition] = useState(false);
-    const [isPasswordShown, setIsPasswordShown] = useState(false);
 
     const changeTermAndCondition = () => {
         setTermAndCondition(!termAndCondition)
@@ -50,16 +49,24 @@ const Signup = () => {
                 <Text>I accept terms and conditions</Text>
             </View>
             <MyAuthButton
+                style={styles.signupButton}
                 buttonName='SIGNUP'
             />
-            <Text style={styles.orText}>Or</Text>
-            <View>
+            <View style={styles.lineAndOrView}>
+                <View style = {styles.lineText} />
+                <Text style={styles.orText}>Or</Text>
+                <View style = {styles.lineText} />
+            </View>
+            <View style={styles.bottomView}>
                 <TouchableOpacity style={styles.fbIconAndTextView}>
                     <EvilIcons name='sc-facebook' color='#ffffff' size={30} />
                     <Text style={styles.facebookText}>Signup with facebook</Text>
                 </TouchableOpacity>
-                <View>
+                <View style={styles.gotAnAccountView}>
                     <Text>Alreadey have an account??</Text>
+                    <TouchableOpacity style={styles.loginButton}>
+                        <Text style={{ color:'#ffffff' }}>Login</Text>
+                    </TouchableOpacity>
                 </View>
             </View>
         </Card>

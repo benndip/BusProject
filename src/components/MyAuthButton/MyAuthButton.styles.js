@@ -3,7 +3,6 @@ import { StyleSheet } from 'react-native'
 import theme from '../../theme'
 const styles = StyleSheet.create({
     container: {
-        width: '90%',
         height: 55,
         backgroundColor: '#2bcbba',
         justifyContent: 'center',

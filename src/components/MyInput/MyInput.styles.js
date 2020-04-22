@@ -11,7 +11,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         paddingHorizontal: 10,
         backgroundColor:  theme.LIGHT_bLUE,
-        borderRadius: 5
 
     },
     input: {
