@@ -3,6 +3,7 @@ import { View } from 'react-native'
 
 import Icon  from 'react-native-vector-icons/Feather';
 import styles from './TabIcon.styles';
+import theme from '../../theme'
 
 const TabIcon = ({title, focused, selected}) => {
 
@@ -25,7 +26,7 @@ const TabIcon = ({title, focused, selected}) => {
     } 
 
     return (
-        <View style={[styles.mainView, { borderTopWidth:3, borderColor: focused? 'indigo':'transparent'}]}>
+        <View style={[styles.mainView, { borderTopWidth:3, borderColor: focused? theme.SECONDARY_COLOR :'transparent'}]}>
         
         <Icon
             size={focused?25:17}

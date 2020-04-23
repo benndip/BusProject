@@ -9,26 +9,27 @@ import {
 } from './../screens/';
 
 import { TabIcon } from '../components'
+import theme from '../theme'
 
 class Navigation extends Component {
     render() {
         return (
             <Router>
                 <Stack key="root">
-                    <Scene key="splashToOnboarding" component={ SplashToOnboarding } hideNavBar={ true }  initial={true}/>
+                    <Scene key="splashToOnboarding" component={ SplashToOnboarding } hideNavBar={ true }  />
                     <Scene key="authentication" hideNavBar={ true } component={ Authentication } />
                     <Scene
                         key="home"
                         tabs
                         tabBarPosition="bottom"
                         showLabel={ true }
-                        activeTintColor="#000"
+                        activeTintColor={theme.DARK_COLOR}
                         hideTabBar={ false }
                         hideNavBar={ true }
-                        labelStyle={ { fontWeight: 'bold', } }
-                        tabBarStyle={{ backgroundColor:'#f4e6ff' }}
+                        labelStyle={ theme.FONT_WEIGHT_HEAVY }
+                        tabBarStyle={{ backgroundColor:theme.TRANSPARENT_PRIMARY }}
                     >
-                        <Scene key="maps" component={ Maps } title="Explore" hideNavBar={ true } icon={ TabIcon } />
+                        <Scene key="maps" component={ Maps } title="Explore" hideNavBar={ true } icon={ TabIcon } initial={true} />
                     </Scene>
                 </Stack>
             </Router>
