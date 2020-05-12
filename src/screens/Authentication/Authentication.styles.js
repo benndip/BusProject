@@ -32,7 +32,10 @@ const styles = StyleSheet.create({
         height: 60,
         backgroundColor: theme.SECONDARY_COLOR
     },
-   
+    viewForScrollView: {
+        flex: 1,
+        width: '100%'
+    }
 })
 
 export default styles

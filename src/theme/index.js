@@ -8,8 +8,8 @@ export default {
 	FONG_FAMILY: 'monospace',
 
 	// COLORS
-	PRIMARY_COLOR: '#3867d6',
-	SECONDARY_COLOR: '#3c40c6',
+	PRIMARY_COLOR: 'rgb(59, 0, 102)',
+	SECONDARY_COLOR: 'rgb(45, 0, 77)',
 	TRANSPARENT_PRIMARY: 'rgba(52, 152, 219,0.4)',
 	WHITE_COLOR: '#FFFFFF',
 	BLACK_COLOR: '#000000',

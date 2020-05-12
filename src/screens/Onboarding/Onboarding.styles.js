@@ -6,10 +6,11 @@ const styles = StyleSheet.create({
       resizeMode: 'cover',
     },
     text: {
-      color: '#3d3d3d',
+      color: '#1e272e',
       marginTop: 92,
       textAlign: 'center',
       fontSize: 19,
+      fontWeight: '900'
       
     },
   });

@@ -14,9 +14,8 @@ const styles = StyleSheet.create({
 
     },
     input: {
-        width: '100%',
+        width: '83%',
         height: '100%',
-        //borderWidth: 1,
         paddingHorizontal: 10,
     },
     secureIconView: {

@@ -9,6 +9,7 @@ import {
 } from './../screens/';
 
 import { TabIcon } from '../components'
+import TabNavigation from './TabNavigation'
 import theme from '../theme'
 
 class Navigation extends Component {
@@ -18,6 +19,7 @@ class Navigation extends Component {
                 <Stack key="root">
                     <Scene key="splashToOnboarding" component={ SplashToOnboarding } hideNavBar={ true }  />
                     <Scene key="authentication" hideNavBar={ true } component={ Authentication } />
+                    <Scene key="tabNavigation" hideNavBar={ true } component={TabNavigation} />
                     <Scene
                         key="home"
                         tabs

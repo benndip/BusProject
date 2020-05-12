@@ -79,9 +79,9 @@ class Maps extends Component {
 						/>
 						<MapboxGL.UserLocation onPress={this.onUserMarkerPress} />
 					</MapboxGL.MapView>
-					<View style={ styles.viewForScroll }>
+					{/*<View style={ styles.viewForScroll }>
 						<Scroll />
-					</View>
+		</View>*/}
 					</View>
 			</SafeAreaView>
 		)

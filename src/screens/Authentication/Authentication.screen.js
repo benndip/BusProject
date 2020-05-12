@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity, StatusBar, ScrollView } from 'react-nativ
 
 import theme from '../../theme'
 import styles from './Authentication.styles'
-import { Header, Card } from '../../components'
+import { Header } from '../../components'
 import { Login, Signup } from '../index'
 
 const Authentication = () => {
@@ -23,7 +23,7 @@ const Authentication = () => {
 
     return (
         <View style={styles.container}>
-            <StatusBar translucent backgroundColor={theme.SECONDARY_COLOR} />
+            <StatusBar translucent  backgroundColor='rgb(45, 0, 77)' />
             <Header
                 title="Account"
             >
@@ -43,9 +43,11 @@ const Authentication = () => {
                 </View>
             </Header>
             <View style={styles.belowHeaderView} />
-            <ScrollView>
+            <View style={styles.viewForScrollView}>
+                <ScrollView>
                     {showLogin ? <Login /> : <Signup />}
-            </ScrollView>
+                </ScrollView>
+            </View>
         </View>
     )
 }

@@ -2,7 +2,7 @@ const styles = {
     
     container: {
         borderRadius: 0,
-        backgroundColor: 'rgba(194, 194, 214,0.6)',
+        backgroundColor: 'rgba(194, 194, 214,0.5)',
         height: 100,
         alignItems: 'center',
         marginHorizontal: 5,

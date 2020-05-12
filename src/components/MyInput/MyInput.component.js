@@ -18,7 +18,7 @@ const MyInput = props => {
             <TextInput
                 style={styles.input}
                 {...props}
-                secureTextEntry={ isPasswordShown ? false: true }
+                secureTextEntry={isPasswordShown ? false : true}
             />
             {props.makeSecured ? (
                 <TouchableOpacity

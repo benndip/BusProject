@@ -2,19 +2,22 @@ import { StyleSheet } from 'react-native'
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: 'transparent',
+    },
+    imageBackground: {
         alignItems: 'center',
-        paddingTop: 15,
+        paddingTop: 45,
+        flex: 1,
+        
     },
     mainText: {
         fontSize: 32,
         fontWeight: 'bold',
-        color: 'indigo',
+        color: '#d2dae2',
     },
     smallText: {
         fontSize: 15,
         fontWeight: 'bold',
-        color: 'indigo',
+        color: '#d2dae2',
     },
     mainView1: {
         width: '100%',
@@ -31,7 +34,7 @@ const styles = StyleSheet.create({
         bottom: 29,
         fontSize: 13,
         fontWeight: '800',
-        color: 'indigo'
+        color: '#d2dae2'
     },
     image: {
         borderRadius: 10,

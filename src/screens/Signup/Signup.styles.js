@@ -3,10 +3,9 @@ import { StyleSheet } from 'react-native'
 import theme from '../../theme'
 
 const styles = StyleSheet.create({
-    card: {
+    container: {
         width: '100%',
         alignItems: 'center',
-        //backgroundColor: 'red'
     },
     IconAndConditionView: {
         marginVertical: 20,
