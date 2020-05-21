@@ -8,7 +8,7 @@ const Tab = createMaterialTopTabNavigator();
 const TabNavigation = () => {
     return (
         <Tab.Navigator
-            initialRouteName="Maps"
+            initialRouteName="Entertainment"
             tabBarOptions={{
                 activeTintColor: theme.WHITE_COLOR,
                 labelStyle: { fontSize: 13, fontWeight: theme.FONT_WEIGHT_HEAVY, },

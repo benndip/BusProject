@@ -10,7 +10,7 @@ import { Card, MyInput, MyAuthButton } from '../../components'
 const Login = () => {
 
     const login = () => {
-        Actions.push('tabNavigation')
+        Actions.push('selectionBoard')
     }
 
     return (

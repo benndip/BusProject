@@ -4,7 +4,6 @@ import MapboxGL from '@react-native-mapbox-gl/maps'
 import Geolocation from '@react-native-community/geolocation';
 
 import styles from './Maps.styles'
-import { Scroll } from '../../components'
 
 MapboxGL.setAccessToken("pk.eyJ1IjoiYmVubmRpcCIsImEiOiJjazRtdWExYWwweHA4M2tuNTljbmxjcjlmIn0.ji9iFK1hYN1sP1H-Kl99Rw");
 
@@ -31,7 +30,7 @@ class Maps extends Component {
 			const isGranted = await MapboxGL.requestAndroidLocationPermissions();
 			this.setState({
 				isAndriodPermissionGranted: isGranted,
-				isFetchingAndroidPermission: false,
+				isFetchingAndroidPermission: true,
 			})
 		};
 
@@ -60,13 +59,10 @@ class Maps extends Component {
 				<View style={styles.container}>
 					<MapboxGL.MapView
 						ref={c => (this._map = c)}
-					
 						zoomLevel={10}
 						onUserLocationUpdate={this.onUserLocationUpdate}
 						centerCoordinate={[this.state.longitude, this.state.latitude][0]}
-						showUserLocation={this.state.showUserLocation}
 						style={styles.container}
-						userTrackingMode={this.state.userSelectedUserTrackingMode}
 						onPress={() => alert("This is your Location:" + this.state.latitude)}
 						userTrackingMode={MapboxGL.UserTrackingModes.Follow}
 					>
@@ -77,11 +73,24 @@ class Maps extends Component {
 							ref={c => (this.camera = c)}
 							centerCoordinate={[this.state.longitude, this.state.latitude]}
 						/>
-						<MapboxGL.UserLocation onPress={this.onUserMarkerPress} />
+						<MapboxGL.PointAnnotation
+							id="yes"
+							title="Buea"
+							draggable
+							snippet="ok"
+							coordinate={[9.3,4.2]}
+						/>
+						<MapboxGL.PointAnnotation
+							id="no"
+							title="Btrue"
+							draggable
+							snippet="om"
+							coordinate={[9.3456678,4.2]}
+						/>
+						<MapboxGL.UserLocation 
+							onPress={this.onUserMarkerPress}
+							/>
 					</MapboxGL.MapView>
-					{/*<View style={ styles.viewForScroll }>
-						<Scroll />
-		</View>*/}
 					</View>
 			</SafeAreaView>
 		)

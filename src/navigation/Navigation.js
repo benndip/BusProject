@@ -4,7 +4,8 @@ import { Router, Stack, Scene, } from 'react-native-router-flux';
 import {
     SplashToOnboarding,
     Authentication,
-    Maps
+    Maps,
+    SelectionBoard
 
 } from './../screens/';
 
@@ -17,9 +18,10 @@ class Navigation extends Component {
         return (
             <Router>
                 <Stack key="root">
-                    <Scene key="splashToOnboarding" component={ SplashToOnboarding } hideNavBar={ true }  />
-                    <Scene key="authentication" hideNavBar={ true } component={ Authentication } />
-                    <Scene key="tabNavigation" hideNavBar={ true } component={TabNavigation} />
+                    <Scene key="splashToOnboarding" component={ SplashToOnboarding } hideNavBar  />
+                    <Scene key="authentication" hideNavBar component={ Authentication } />
+                    <Scene key="tabNavigation" hideNavBar component={TabNavigation} />
+                    <Scene key="selectionBoard" hideNavBar component={SelectionBoard} />
                     <Scene
                         key="home"
                         tabs
