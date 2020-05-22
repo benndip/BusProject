@@ -2,14 +2,16 @@ import { StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
     card: {
-        shadowColor: 'black',
+        shadowColor: '#000',
         shadowOffset: { width: 0, height: 2 },
-        shadowRadius: 6,
-        shadowOpacity: 0.26,
-        backgroundColor: 'white',
-        elevation: 12,
-        padding: 20,
-        borderRadius: 5
+        shadowRadius: 2,
+        shadowOpacity: 0.1,
+        elevation: 1,
+        borderRadius: 2,
+        borderWidth:0.6,
+        borderColor: '#ddd',
+        borderBottomWidth: 0,
+        paddingVertical:9
     }
 })
 export default styles

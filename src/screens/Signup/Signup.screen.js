@@ -16,7 +16,7 @@ const Signup = () => {
     }
 
     return (
-        <View style={styles.container}>
+        <Card style={styles.container}>
             <MyInput
                 iconName='user'
                 placeholder='Name'
@@ -69,7 +69,7 @@ const Signup = () => {
                     </TouchableOpacity>
                 </View>
             </View>
-        </View>
+        </Card>
     )
 }
 

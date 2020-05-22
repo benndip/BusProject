@@ -4,7 +4,7 @@ import theme from '../../theme/index'
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        alignItems: 'center',
+        backgroundColor: '#fff'
     },
     headerView: {
         flexDirection: 'row',
@@ -12,7 +12,6 @@ const styles = StyleSheet.create({
         height: 40,
         alignItems: 'center',
         justifyContent: 'space-around',
-        //backgroundColor: 'pink'
     },
     text: {
         fontSize: theme.FONT_SIZE_MEDIUM,
@@ -22,7 +21,6 @@ const styles = StyleSheet.create({
     touch: {
         width: '40%',
         height: 40,
-        //backgroundColor:'red',
         justifyContent: 'center',
         alignItems: 'center',
         borderColor: '#0fb9b1'
@@ -35,6 +33,11 @@ const styles = StyleSheet.create({
     viewForScrollView: {
         flex: 1,
         width: '100%'
+    },
+    scroll: {
+        width: '100%',
+        alignItems: 'center',
+        padding: 9
     }
 })
 

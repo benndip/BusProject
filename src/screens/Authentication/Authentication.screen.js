@@ -23,7 +23,7 @@ const Authentication = () => {
 
     return (
         <View style={styles.container}>
-            <StatusBar translucent  backgroundColor='rgb(45, 0, 77)' />
+            <StatusBar barStyle='light-content'  backgroundColor='rgb(45, 0, 77)' />
             <Header
                 title="Account"
             >
@@ -44,7 +44,7 @@ const Authentication = () => {
             </Header>
             <View style={styles.belowHeaderView} />
             <View style={styles.viewForScrollView}>
-                <ScrollView>
+                <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.scroll}>
                     {showLogin ? <Login /> : <Signup />}
                 </ScrollView>
             </View>

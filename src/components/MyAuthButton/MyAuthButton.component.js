@@ -3,13 +3,13 @@ import { Text, TouchableOpacity } from 'react-native'
 
 import styles from './MyAuthButton.styles'
 
-const MyAuthButton = props => {
+const MyAuthButton = ({ buttonName, ...props }) => {
   return (
     <TouchableOpacity
       {...props}
       style={{ ...styles.container, ...props.style }}
     >
-      <Text style={styles.text}>{props.buttonName}</Text>
+      <Text style={styles.text}>{buttonName}</Text>
     </TouchableOpacity>
   )
 }
