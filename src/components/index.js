@@ -5,6 +5,8 @@ import MyAuthButton from './MyAuthButton/MyAuthButton.component'
 import TabIcon from './TabIcon/TabIcon.component'
 import ItemBox from './ItemBox/ItemBox.component'
 import SelectionBoardItem from './SelectionBoardItem/SelectionBoardItem.component'
+import Switch from './Switch/Switch.component'
+import RegionAndTown from './RegionAndTown/RegionAndTown.component'
 
 export {
     MyInput,
@@ -13,5 +15,7 @@ export {
     MyAuthButton,
     TabIcon,
     ItemBox,
-    SelectionBoardItem
+    SelectionBoardItem,
+    Switch,
+    RegionAndTown
 }

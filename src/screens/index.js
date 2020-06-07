@@ -10,6 +10,7 @@ import Entertainment from './Entertainment/Entertainment.screen'
 import JourneyRecords from './JourneyRecords/JourneyRecords.screen'
 import News from './News/News.screen'
 import SelectionBoard from './SelectionBoard/SelectionBoard'
+import BoardBus from './BoardBus/BoardBus.screen'
 
 export {
     SplashToOnboarding,
@@ -24,5 +25,6 @@ export {
     JourneyRecords,
     News,
     SelectionBoard,
+    BoardBus
     
 }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, TouchableOpacity, Animated, } from 'react-native';
+import { Text, View, Animated, } from 'react-native';
 
 import styles from './ItemBox.styles'
 
@@ -13,7 +13,7 @@ class ItemBox extends Component {
 
     _slideLeft=()=>{
         Animated.timing(this.state.left,{
-            toValue:-90,
+            toValue:-10,
             duration:4300
         }).start(() => {
             Animated.timing(this.state.left, {
@@ -30,9 +30,9 @@ class ItemBox extends Component {
     render() {
         return (
             <Animated.View style={[ styles.container, { left:this.state.left } ]}>
-                <TouchableOpacity onPress={this.props.onPress} style={styles.touch}>
+                <View onPress={this.props.onPress} style={styles.touch}>
                     <Text style={styles.text}>{this.props.textItem}</Text>
-                </TouchableOpacity>
+                </View>
             </Animated.View>
 
         );

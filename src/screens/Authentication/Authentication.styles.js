@@ -4,7 +4,7 @@ import theme from '../../theme/index'
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff'
+        backgroundColor: '#f1f2f6'
     },
     headerView: {
         flexDirection: 'row',
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     },
     belowHeaderView: {
         width: '100%',
-        height: 60,
+        height: 0,
         backgroundColor: theme.SECONDARY_COLOR
     },
     viewForScrollView: {

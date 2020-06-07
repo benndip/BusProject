@@ -6,12 +6,13 @@ const styles = StyleSheet.create({
         shadowOffset: { width: 0, height: 2 },
         shadowRadius: 2,
         shadowOpacity: 0.1,
-        elevation: 1,
-        borderRadius: 2,
+        elevation: 8,
         borderWidth:0.6,
         borderColor: '#ddd',
         borderBottomWidth: 0,
-        paddingVertical:9
+        backgroundColor: '#ffffff',
+        padding: 0,
+        marginVertical: 5
     }
 })
 export default styles

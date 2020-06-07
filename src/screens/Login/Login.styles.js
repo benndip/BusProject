@@ -6,6 +6,7 @@ const styles = StyleSheet.create({
     card: {
         width: '100%',
         alignItems:'center',
+        paddingBottom:10
     },
     forgotPasswordText: {
         fontWeight: 'bold',

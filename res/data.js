@@ -31,6 +31,12 @@ const Regions = [
   {
     id: 2,
     regionName: 'North-West',
+    towns: [
+      'Buea',
+      'Kumba',
+      'Limbe',
+      'Tiko',
+    ],
     regionCoordinates: {
       long: 12345,
       lat: 12345
@@ -39,6 +45,12 @@ const Regions = [
   {
     id: 3,
     regionName: 'North',
+    towns: [
+      'Buea',
+      'Kumba',
+      'Limbe',
+      'Tiko',
+    ],
     regionCoordinates: {
       long: 12345,
       lat: 12345
@@ -47,6 +59,12 @@ const Regions = [
   {
     id: 4,
     regionName: 'West',
+    towns: [
+      'Buea',
+      'Kumba',
+      'Limbe',
+      'Tiko',
+    ],
     regionCoordinates: {
       long: 12345,
       lat: 12345
@@ -55,6 +73,12 @@ const Regions = [
   {
     id: 5,
     regionName: 'East',
+    towns: [
+      'Buea',
+      'Kumba',
+      'Limbe',
+      'Tiko',
+    ],
     regionCoordinates: {
       long: 12345,
       lat: 12345
@@ -63,6 +87,12 @@ const Regions = [
   {
     id: 6,
     regionName: 'South',
+    towns: [
+      'Buea',
+      'Kumba',
+      'Limbe',
+      'Tiko',
+    ],
     regionCoordinates: {
       long: 12345,
       lat: 12345
@@ -71,6 +101,12 @@ const Regions = [
   {
     id: 7,
     regionName: 'Center',
+    towns: [
+      'Buea',
+      'Kumba',
+      'Limbe',
+      'Tiko',
+    ],
     regionCoordinates: {
       long: 12345,
       lat: 12345
@@ -79,6 +115,12 @@ const Regions = [
   {
     id: 8,
     regionName: 'Littoral',
+    towns: [
+      'Buea',
+      'Kumba',
+      'Limbe',
+      'Tiko',
+    ],
     regionCoordinates: {
       long: 12345,
       lat: 12345
@@ -87,6 +129,12 @@ const Regions = [
   {
     id: 9,
     regionName: 'Adamawa',
+    towns: [
+      'Buea',
+      'Kumba',
+      'Limbe',
+      'Tiko',
+    ],
     regionCoordinates: {
       long: 12345,
       lat: 12345
@@ -95,6 +143,12 @@ const Regions = [
   {
     id: 10,
     regionName: 'Far-North',
+    towns: [
+      'Buea',
+      'Kumba',
+      'Limbe',
+      'Tiko',
+    ],
     regionCoordinates: {
       long: 12345,
       lat: 12345
