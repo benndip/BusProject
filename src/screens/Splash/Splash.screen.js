@@ -15,14 +15,16 @@ const Splash = () => {
         const height = (Dimensions.get('window').height) / 2
         Animated.timing(initials._animatedHeight, {
             toValue: height,
-            duration: 5000
+            duration: 5000,
+            useNativeDriver:false
         }).start()
     }
     const animateWidth = () => {
         const width = (Dimensions.get('window').width) / 1.1
         Animated.timing(initials._animatedWidth, {
             toValue: width,
-            duration: 5000
+            duration: 5000,
+            useNativeDriver:false
         }).start()
     }
 

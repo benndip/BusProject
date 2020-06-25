@@ -1,12 +1,12 @@
 const styles = {
     
     container: {
-        borderRadius: 0,
+        borderRadius: 7,
         backgroundColor: 'rgba(194, 194, 214,0.5)',
-        height: 110,
+        height: 100,
         alignItems: 'center',
         marginHorizontal: 5,
-        width: 150,
+        width: 160,
         justifyContent: 'center'
     },
     touch:{

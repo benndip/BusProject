@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { View, SafeAreaView, Platform, ScrollView } from 'react-native'
+import { View, SafeAreaView, Platform } from 'react-native'
+
 import MapboxGL from '@react-native-mapbox-gl/maps'
 import Geolocation from '@react-native-community/geolocation';
 
@@ -35,6 +36,7 @@ class Maps extends Component {
 		};
 
 		MapboxGL.locationManager.start();
+		
 		Geolocation.getCurrentPosition(info => {
 			let lat = parseFloat(info.coords.latitude);
 			let long = parseFloat(info.coords.longitude);
@@ -88,7 +90,8 @@ class Maps extends Component {
 							coordinate={[9.3456678,4.2]}
 						/>
 						<MapboxGL.UserLocation 
-							onPress={this.onUserMarkerPress}
+							onPress={()=>{alert('')}}
+							showsUserHeadingIndicator
 							/>
 					</MapboxGL.MapView>
 					</View>

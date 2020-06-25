@@ -16,11 +16,11 @@ class Navigation extends Component {
         return (
             <Router>
                 <Stack key="root">
-                    <Scene key="splashToOnboarding" component={ SplashToOnboarding } hideNavBar  />
+                    <Scene initial key="splashToOnboarding" component={ SplashToOnboarding } hideNavBar  />
                     <Scene key="authentication" hideNavBar component={ Authentication } />
                     <Scene key="tabNavigation" hideNavBar component={TabNavigation} />
                     <Scene key="selectionBoard" hideNavBar component={SelectionBoard} />
-                    <Scene initial key="boardBus" component={BoardBus} />
+                    <Scene key="boardBus" hideNavBar component={BoardBus} />
                 </Stack>
             </Router>
         )

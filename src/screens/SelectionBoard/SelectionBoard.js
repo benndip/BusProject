@@ -25,7 +25,7 @@ class SelectionBoard extends Component {
                         <SelectionBoardItem
                             imagePath={require('../../../res/img/bd1.png')}
                             belowText='Board a bus'
-                            
+                            onPress={()=>Actions.push('boardBus')}
                         />
                         <SelectionBoardItem
                             imagePath={require('../../../res/img/bs1.jpeg')}

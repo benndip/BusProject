@@ -6,7 +6,8 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#f1f2f6',
         alignItems: 'center',
-        padding: 5
+        padding: 5,
+        paddingTop: 30
     },
     dateAndTimeView:{
         margin:5,
@@ -17,14 +18,12 @@ const styles = StyleSheet.create({
         width: '100%' 
     },
     viewForImage: {
-        borderWidth:1, 
         alignItems: 'center', 
         width: 50, 
         justifyContent: 'center'
     },
     viewForText: {
         padding:5,
-        borderWidth: 1
     },
     text:{
         fontSize: 18,
@@ -42,7 +41,6 @@ const styles = StyleSheet.create({
     viewForVerticalScroll: {
         flex: 1,
         width: '100%',
-       // borderWidth: 1,
         padding: 3
     },
     scroll: {

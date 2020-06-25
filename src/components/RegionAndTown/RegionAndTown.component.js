@@ -6,14 +6,14 @@ import { ItemBox,Card } from '../../components'
 
 const RegionAndTown = ({ textItem, children }) => {
     return (
-        <Card style={styles.container}>
+        <View style={styles.container}>
             <ItemBox
                 textItem={textItem}
             />
             <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ alignItems: 'center', }}>
                 {children}
             </ScrollView>
-        </Card>
+        </View>
     );
 }
 

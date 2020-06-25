@@ -76,6 +76,7 @@ class BoardBus extends Component {
             {Regions.map((items) =>
               <RegionAndTown
                 textItem={items.regionName}
+                key={items.id}
               >
                 {items.towns.map((towns) =>
                   <TouchableOpacity style={styles.townTouch}>

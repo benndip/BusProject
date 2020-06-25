@@ -14,11 +14,13 @@ class ItemBox extends Component {
     _slideLeft=()=>{
         Animated.timing(this.state.left,{
             toValue:-10,
-            duration:4300
+            duration:4000,
+            useNativeDriver: false
         }).start(() => {
             Animated.timing(this.state.left, {
               toValue: 1,
               duration: 700,
+              useNativeDriver: false
             }).start()
           })
     }
