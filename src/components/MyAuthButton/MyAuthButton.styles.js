@@ -4,7 +4,7 @@ import theme from '../../theme'
 const styles = StyleSheet.create({
     container: {
         height: 55,
-        backgroundColor: '#2bcbba',
+        backgroundColor: 'indigo',
         justifyContent: 'center',
         alignItems: 'center',
     },

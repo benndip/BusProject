@@ -4,7 +4,7 @@ import AntDesign from 'react-native-vector-icons/AntDesign'
 import Feather from 'react-native-vector-icons/Feather'
 import styles from "./MyInput.styles";
 
-const MyInput = ({ iconName, color, makeSecured, ...props }) => {
+const MyInput = ({ iconName, makeSecured, ...props }) => {
 
     const [isPasswordShown, setIsPasswordShown] = useState(false);
 
@@ -14,11 +14,12 @@ const MyInput = ({ iconName, color, makeSecured, ...props }) => {
 
     return (
         <View style={styles.container}>
-            <AntDesign name={iconName} color={color} size={25} />
+            <AntDesign name={iconName} color='indigo' size={26} />
             <TextInput
                 style={styles.input}
                 {...props}
                 secureTextEntry={isPasswordShown ? true : false}
+                placeholderTextColor='indigo'
             />
             {makeSecured ? (
                 <TouchableOpacity
@@ -26,8 +27,8 @@ const MyInput = ({ iconName, color, makeSecured, ...props }) => {
                     onPress={togglePasswordVissibility}
                 >
                     {isPasswordShown ?
-                        (<Feather name='eye-off' color='#2C3A47' size={25} />)
-                        : (<Feather name='eye' color='#d1d8e0' size={25} />)
+                        (<Feather name='eye-off' color='indigo' size={26} />)
+                        : (<Feather name='eye' color='indigo' size={26} />)
                     }
 
                 </TouchableOpacity>

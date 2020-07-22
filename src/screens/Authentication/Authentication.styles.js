@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     scroll: {
         width: '100%',
         alignItems: 'center',
-        padding: 9
+        padding: 5
     }
 })
 

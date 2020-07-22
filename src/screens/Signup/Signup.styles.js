@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     loginButton: {
         width: 50,
         height: 30,
-        backgroundColor: '#2c2c54',
+        backgroundColor: 'indigo',
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 1

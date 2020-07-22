@@ -5,7 +5,8 @@ import {
     SplashToOnboarding,
     Authentication,
     SelectionBoard,
-    BoardBus
+    BoardBus,
+    Login
 
 } from './../screens/';
 
@@ -21,6 +22,7 @@ class Navigation extends Component {
                     <Scene key="tabNavigation" hideNavBar component={TabNavigation} />
                     <Scene key="selectionBoard" hideNavBar component={SelectionBoard} />
                     <Scene key="boardBus" hideNavBar component={BoardBus} />
+                    <Scene key="login" hideNavBar component={Login} />
                 </Stack>
             </Router>
         )

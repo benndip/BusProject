@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { View, Text, TouchableOpacity } from 'react-native'
+import { Actions } from 'react-native-router-flux'
 import Icon from 'react-native-vector-icons/AntDesign'
 import EvilIcons from 'react-native-vector-icons/EvilIcons'
 
@@ -64,7 +65,10 @@ const Signup = () => {
                 </TouchableOpacity>
                 <View style={styles.gotAnAccountView}>
                     <Text>Alreadey have an account??</Text>
-                    <TouchableOpacity style={styles.loginButton}>
+                    <TouchableOpacity
+                        style={styles.loginButton}
+                        onPress={()=>{Actions.push('login')}}
+                    >
                         <Text style={{ color:'#ffffff' }}>Login</Text>
                     </TouchableOpacity>
                 </View>

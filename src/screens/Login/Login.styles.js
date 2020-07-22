@@ -4,9 +4,9 @@ import theme from '../../theme'
 
 const styles = StyleSheet.create({
     card: {
-        width: '100%',
         alignItems:'center',
-        paddingBottom:10
+        paddingBottom:10,
+        marginTop: '50%',
     },
     forgotPasswordText: {
         fontWeight: 'bold',
