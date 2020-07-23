@@ -65,7 +65,7 @@ class Maps extends Component {
 						onUserLocationUpdate={this.onUserLocationUpdate}
 						centerCoordinate={[this.state.longitude, this.state.latitude][0]}
 						style={styles.container}
-						onPress={() => alert("This is your Location:" + this.state.latitude)}
+						onPress={() => alert("This is your Location:" + this.state.latitude+","+this.state.longitude)}
 						userTrackingMode={MapboxGL.UserTrackingModes.Follow}
 					>
 						<MapboxGL.Camera
@@ -90,7 +90,7 @@ class Maps extends Component {
 							coordinate={[9.3456678,4.2]}
 						/>
 						<MapboxGL.UserLocation 
-							onPress={()=>{alert('')}}
+							onPress={()=>{alert(this.state.latitude,this.state.latitude)}}
 							showsUserHeadingIndicator
 							/>
 					</MapboxGL.MapView>

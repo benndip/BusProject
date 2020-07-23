@@ -6,10 +6,10 @@ import styles from "./MyInput.styles";
 
 const MyInput = ({ iconName, makeSecured, ...props }) => {
 
-    const [isPasswordNotShown, setIsPasswordNotShown] = useState(true);
+    const [passwordNotShown, setpasswordNotShown] = useState(true);
 
     const togglePasswordVissibility = () => {
-        setIsPasswordNotShown(!isPasswordNotShown)
+        setpasswordNotShown(!passwordNotShown)
     }
 
     return (
@@ -18,15 +18,17 @@ const MyInput = ({ iconName, makeSecured, ...props }) => {
             <TextInput
                 style={styles.input}
                 {...props}
-                secureTextEntry={isPasswordNotShown ? true : false}
+                secureTextEntry={makeSecured?(passwordNotShown ? true : false):null}
                 placeholderTextColor='indigo'
+                autoCapitalize='none'
+                autoCorrect= {false}
             />
             {makeSecured ? (
                 <TouchableOpacity
                     style={styles.secureIconView}
                     onPress={togglePasswordVissibility}
                 >
-                    {isPasswordNotShown ?
+                    {passwordNotShown ?
                         (<Feather name='eye-off' color='indigo' size={26} />)
                         : (<Feather name='eye' color='indigo' size={26} />)
                     }
