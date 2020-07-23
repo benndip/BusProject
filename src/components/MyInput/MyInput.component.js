@@ -6,10 +6,10 @@ import styles from "./MyInput.styles";
 
 const MyInput = ({ iconName, makeSecured, ...props }) => {
 
-    const [isPasswordShown, setIsPasswordShown] = useState(false);
+    const [isPasswordNotShown, setIsPasswordNotShown] = useState(true);
 
     const togglePasswordVissibility = () => {
-        setIsPasswordShown(!isPasswordShown)
+        setIsPasswordNotShown(!isPasswordNotShown)
     }
 
     return (
@@ -18,7 +18,7 @@ const MyInput = ({ iconName, makeSecured, ...props }) => {
             <TextInput
                 style={styles.input}
                 {...props}
-                secureTextEntry={isPasswordShown ? true : false}
+                secureTextEntry={isPasswordNotShown ? true : false}
                 placeholderTextColor='indigo'
             />
             {makeSecured ? (
@@ -26,7 +26,7 @@ const MyInput = ({ iconName, makeSecured, ...props }) => {
                     style={styles.secureIconView}
                     onPress={togglePasswordVissibility}
                 >
-                    {isPasswordShown ?
+                    {isPasswordNotShown ?
                         (<Feather name='eye-off' color='indigo' size={26} />)
                         : (<Feather name='eye' color='indigo' size={26} />)
                     }

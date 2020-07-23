@@ -7,6 +7,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'indigo',
         justifyContent: 'center',
         alignItems: 'center',
+        borderRadius: 5
     },
     text: {
         color: theme.WHITE_COLOR,
