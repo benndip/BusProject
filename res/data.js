@@ -18,10 +18,38 @@ const Regions = [
     id: 1,
     regionName: 'South-West',
     towns: [
-      'Buea',
-      'Kumba',
-      'Limbe',
-      'Tiko',
+      {
+        t_id: 1,
+        t_name: 'Buea',
+        t_coords: {
+          long: 12345,
+          lat: 12345
+        }
+      },
+      {
+        t_id: 2,
+        t_name: 'Tiko',
+        t_coords: {
+          long: 12345,
+          lat: 12345
+        }
+      },
+      {
+        t_id: 3,
+        t_name: 'Limbe',
+        t_coords: {
+          long: 12345,
+          lat: 12345
+        }
+      },
+      {
+        t_id: 4,
+        t_name: 'Mutengene',
+        t_coords: {
+          long: 12345,
+          lat: 12345
+        }
+      },
     ],
     regionCoordinates: {
       long: 12345,
@@ -32,10 +60,38 @@ const Regions = [
     id: 2,
     regionName: 'North-West',
     towns: [
-      'Buea',
-      'Kumba',
-      'Limbe',
-      'Tiko',
+      {
+        t_id: 1,
+        t_name: 'Buea',
+        t_coords: {
+          long: 12345,
+          lat: 12345
+        }
+      },
+      {
+        t_id: 2,
+        t_name: 'Tiko',
+        t_coords: {
+          long: 12345,
+          lat: 12345
+        }
+      },
+      {
+        t_id: 3,
+        t_name: 'Limbe',
+        t_coords: {
+          long: 12345,
+          lat: 12345
+        }
+      },
+      {
+        t_id: 4,
+        t_name: 'Mutengene',
+        t_coords: {
+          long: 12345,
+          lat: 12345
+        }
+      },
     ],
     regionCoordinates: {
       long: 12345,
@@ -44,12 +100,40 @@ const Regions = [
   },
   {
     id: 3,
-    regionName: 'North',
+    regionName: 'Center',
     towns: [
-      'Buea',
-      'Kumba',
-      'Limbe',
-      'Tiko',
+      {
+        t_id: 1,
+        t_name: 'Buea',
+        t_coords: {
+          long: 12345,
+          lat: 12345
+        }
+      },
+      {
+        t_id: 2,
+        t_name: 'Tiko',
+        t_coords: {
+          long: 12345,
+          lat: 12345
+        }
+      },
+      {
+        t_id: 3,
+        t_name: 'Limbe',
+        t_coords: {
+          long: 12345,
+          lat: 12345
+        }
+      },
+      {
+        t_id: 4,
+        t_name: 'Mutengene',
+        t_coords: {
+          long: 12345,
+          lat: 12345
+        }
+      },
     ],
     regionCoordinates: {
       long: 12345,
@@ -58,12 +142,40 @@ const Regions = [
   },
   {
     id: 4,
-    regionName: 'West',
+    regionName: 'Littoral',
     towns: [
-      'Buea',
-      'Kumba',
-      'Limbe',
-      'Tiko',
+      {
+        t_id: 1,
+        t_name: 'Buea',
+        t_coords: {
+          long: 12345,
+          lat: 12345
+        }
+      },
+      {
+        t_id: 2,
+        t_name: 'Tiko',
+        t_coords: {
+          long: 12345,
+          lat: 12345
+        }
+      },
+      {
+        t_id: 3,
+        t_name: 'Limbe',
+        t_coords: {
+          long: 12345,
+          lat: 12345
+        }
+      },
+      {
+        t_id: 4,
+        t_name: 'Mutengene',
+        t_coords: {
+          long: 12345,
+          lat: 12345
+        }
+      },
     ],
     regionCoordinates: {
       long: 12345,
@@ -72,12 +184,40 @@ const Regions = [
   },
   {
     id: 5,
-    regionName: 'East',
+    regionName: 'Adamawa',
     towns: [
-      'Buea',
-      'Kumba',
-      'Limbe',
-      'Tiko',
+      {
+        t_id: 1,
+        t_name: 'Buea',
+        t_coords: {
+          long: 12345,
+          lat: 12345
+        }
+      },
+      {
+        t_id: 2,
+        t_name: 'Tiko',
+        t_coords: {
+          long: 12345,
+          lat: 12345
+        }
+      },
+      {
+        t_id: 3,
+        t_name: 'Limbe',
+        t_coords: {
+          long: 12345,
+          lat: 12345
+        }
+      },
+      {
+        t_id: 4,
+        t_name: 'Mutengene',
+        t_coords: {
+          long: 12345,
+          lat: 12345
+        }
+      },
     ],
     regionCoordinates: {
       long: 12345,
@@ -86,68 +226,40 @@ const Regions = [
   },
   {
     id: 6,
-    regionName: 'South',
+    regionName: 'North',
     towns: [
-      'Buea',
-      'Kumba',
-      'Limbe',
-      'Tiko',
-    ],
-    regionCoordinates: {
-      long: 12345,
-      lat: 12345
-    }
-  },
-  {
-    id: 7,
-    regionName: 'Center',
-    towns: [
-      'Buea',
-      'Kumba',
-      'Limbe',
-      'Tiko',
-    ],
-    regionCoordinates: {
-      long: 12345,
-      lat: 12345
-    }
-  },
-  {
-    id: 8,
-    regionName: 'Littoral',
-    towns: [
-      'Buea',
-      'Kumba',
-      'Limbe',
-      'Tiko',
-    ],
-    regionCoordinates: {
-      long: 12345,
-      lat: 12345
-    }
-  },
-  {
-    id: 9,
-    regionName: 'Adamawa',
-    towns: [
-      'Buea',
-      'Kumba',
-      'Limbe',
-      'Tiko',
-    ],
-    regionCoordinates: {
-      long: 12345,
-      lat: 12345
-    }
-  },
-  {
-    id: 10,
-    regionName: 'Far-North',
-    towns: [
-      'Buea',
-      'Kumba',
-      'Limbe',
-      'Tiko',
+      {
+        t_id: 1,
+        t_name: 'Buea',
+        t_coords: {
+          long: 12345,
+          lat: 12345
+        }
+      },
+      {
+        t_id: 2,
+        t_name: 'Tiko',
+        t_coords: {
+          long: 12345,
+          lat: 12345
+        }
+      },
+      {
+        t_id: 3,
+        t_name: 'Limbe',
+        t_coords: {
+          long: 12345,
+          lat: 12345
+        }
+      },
+      {
+        t_id: 4,
+        t_name: 'Mutengene',
+        t_coords: {
+          long: 12345,
+          lat: 12345
+        }
+      },
     ],
     regionCoordinates: {
       long: 12345,

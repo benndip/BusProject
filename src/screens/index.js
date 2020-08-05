@@ -11,7 +11,7 @@ import JourneyRecords from './JourneyRecords/JourneyRecords.screen'
 import News from './News/News.screen'
 import SelectionBoard from './SelectionBoard/SelectionBoard'
 import BoardBus from './BoardBus/BoardBus.screen'
-
+import FinallyBoard from './FinallyBoard/FinallyBoard.screen'
 export {
     SplashToOnboarding,
     Splash,
@@ -25,6 +25,6 @@ export {
     JourneyRecords,
     News,
     SelectionBoard,
-    BoardBus
-    
+    BoardBus,
+    FinallyBoard
 }

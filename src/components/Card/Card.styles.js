@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
         shadowOffset: { width: 0, height: 2 },
         shadowRadius: 2,
         shadowOpacity: 0.1,
-        elevation: 8,
+        elevation: 4,
         borderWidth:0.6,
         borderColor: '#ddd',
         borderBottomWidth: 0,

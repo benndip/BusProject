@@ -1,13 +1,48 @@
 import React, { Component } from 'react'
-import { View, Text, ScrollView, TouchableOpacity } from 'react-native'
+import { View, Text, ScrollView, TouchableOpacity, Platform} from 'react-native'
+import RNAndroidLocationEnabler from 'react-native-android-location-enabler';
 import AntDesign from 'react-native-vector-icons/AntDesign'
 import { Actions } from 'react-native-router-flux'
+import MapboxGL from '@react-native-mapbox-gl/maps'
 
 import styles from './SelectionBoard.styles'
 
 import { SelectionBoardItem } from '../../components/'
 
+const IS_ANDROID = Platform.OS === 'android';
+
 class SelectionBoard extends Component {
+
+    constructor(props) {
+		super(props);
+		this.state = {
+			isAndriodPermissionGranted: false,
+			isFetchingAndroidPermission: IS_ANDROID,
+		}
+
+    }
+    
+    async componentDidMount(){
+        //check for android location permission
+        if (IS_ANDROID) {
+			const isGranted = await MapboxGL.requestAndroidLocationPermissions();
+			this.setState({
+				isAndriodPermissionGranted: isGranted,
+				isFetchingAndroidPermission: true,
+			})
+        };
+
+    //check if user locaation is on
+        RNAndroidLocationEnabler.promptForEnableLocationIfNeeded({interval: 10000, fastInterval: 5000})
+        .then(data => {
+            console.log(data);
+        }).catch(err => {
+            console.log("Error " + err.message + ", Code : " + err.code);
+        });
+
+          //start the location manager
+        MapboxGL.locationManager.start();
+    }
     render() {
         return (
             <View style={styles.container}>

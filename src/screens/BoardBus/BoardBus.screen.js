@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { Text, View, Image, ScrollView, TouchableOpacity } from 'react-native'
+import { Text, View, Image, ScrollView, TouchableOpacity, StatusBar, Alert } from 'react-native';
+import { Actions } from 'react-native-router-flux'
 
 import styles from './BoardBus.styles'
 import theme from '../../theme'
@@ -41,6 +42,7 @@ class BoardBus extends Component {
 
     return (
       <View style={styles.container}>
+        <StatusBar barStyle='dark-content' backgroundColor="transparent" />
         <View style={styles.dateAndTimeView}>
           <Text>Time {this.state.time}</Text>
           <Text>Date {this.state.date}</Text>
@@ -73,14 +75,20 @@ class BoardBus extends Component {
         </Card>
         <View style={styles.viewForVerticalScroll}>
           <ScrollView>
-            {Regions.map((items) =>
+            {Regions.map((item) =>
               <RegionAndTown
-                textItem={items.regionName}
-                key={items.id}
+                textItem={item.regionName}
+                key={item.id}
               >
-                {items.towns.map((towns) =>
-                  <TouchableOpacity style={styles.townTouch}>
-                    <Text>{towns}</Text>
+                {item.towns.map((town) =>
+                  <TouchableOpacity
+                    style={styles.townTouch}
+                    onPress={()=>{
+                      //Alert.alert(item.regionName,town.t_name)
+                      Actions.finallyBoard({regionName:item.regionName, townName:town.t_name})
+                    }}
+                  >
+                    <Text key={town.t_id}>{town.t_name}</Text>
                   </TouchableOpacity>
                 )}
               </RegionAndTown>

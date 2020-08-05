@@ -28,16 +28,16 @@ const Signup = () => {
             />
             <MyInput
                 iconName='phone'
-                placeholder='phone number'
+                placeholder='Phone number'
             />
             <MyInput
                 iconName='lock1'
-                placeholder='password'
+                placeholder='Password'
                 makeSecured
             />
             <MyInput
                 iconName='lock1'
-                placeholder='confirm password'
+                placeholder='Confirm password'
                 makeSecured
             />
             <View style={styles.IconAndConditionView}>
@@ -55,23 +55,14 @@ const Signup = () => {
             />
             <View style={styles.lineAndOrView}>
                 <View style = {styles.lineText} />
-                <Text style={styles.orText}>Or</Text>
+                <Text style={styles.orText}>OR</Text>
                 <View style = {styles.lineText} />
             </View>
             <View style={styles.bottomView}>
                 <TouchableOpacity style={styles.fbIconAndTextView}>
                     <EvilIcons name='sc-facebook' color='#ffffff' size={30} />
-                    <Text style={styles.facebookText}>Signup with facebook</Text>
+                    <Text style={styles.facebookText}>SIGNUP WITH FACEBOOK</Text>
                 </TouchableOpacity>
-                <View style={styles.gotAnAccountView}>
-                    <Text>Alreadey have an account??</Text>
-                    <TouchableOpacity
-                        style={styles.loginButton}
-                        onPress={()=>{Actions.push('login')}}
-                    >
-                        <Text style={{ color:'#ffffff' }}>Login</Text>
-                    </TouchableOpacity>
-                </View>
             </View>
         </Card>
     )

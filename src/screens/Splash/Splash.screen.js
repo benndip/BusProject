@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react'
-import { Animated, Dimensions, View, Text, ImageBackground } from 'react-native'
+import { Animated, Dimensions, View, Text, ImageBackground, StatusBar } from 'react-native'
+import MapboxGL from '@react-native-mapbox-gl/maps'
+
 
 import styles from './Splash.styles'
 
@@ -31,10 +33,13 @@ const Splash = () => {
     useEffect(() => {
         animateHeight()
         animateWidth()
+        MapboxGL.locationManager.start();
+
     }, [])
 
     return (
         <View style={styles.container}>
+            <StatusBar barStyle='dark-content'  backgroundColor='transparent' />
             <ImageBackground
                 source={require('../../../res/img/splashBackground.jpeg')}
                 style={styles.imageBackground}

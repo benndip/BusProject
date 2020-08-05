@@ -25,14 +25,6 @@ const styles = StyleSheet.create({
     signupButton: {
         width: '95%'
     },
-    loginButton: {
-        width: 50,
-        height: 30,
-        backgroundColor: 'indigo',
-        justifyContent: 'center',
-        alignItems: 'center',
-        borderRadius: 1
-    },
     orText: {
         marginVertical: 10,
     },
@@ -42,10 +34,13 @@ const styles = StyleSheet.create({
     },
     fbIconAndTextView: {
         flexDirection: 'row',
-        padding: 10,
         backgroundColor: '#3867d6',
         alignItems: 'center',
-        marginBottom: 20
+        marginBottom: 20,
+        width: '95%',
+        height: 50,
+        justifyContent: 'center',
+        alignItems: 'center'
     },
     facebookText: {
         color: '#ffffff'

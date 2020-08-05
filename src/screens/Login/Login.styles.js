@@ -14,7 +14,8 @@ const styles = StyleSheet.create({
         marginVertical: 20
     },
     loginButton: {
-        width: '95%'
+        width: '95%',
+        marginTop:10
     }
 })
 export default styles

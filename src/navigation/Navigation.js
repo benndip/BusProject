@@ -6,8 +6,8 @@ import {
     Authentication,
     SelectionBoard,
     BoardBus,
-    Login
-
+    Login,
+    FinallyBoard
 } from './../screens/';
 
 import TabNavigation from './TabNavigation'
@@ -20,9 +20,10 @@ class Navigation extends Component {
                     <Scene initial key="splashToOnboarding" component={ SplashToOnboarding } hideNavBar  />
                     <Scene key="authentication" hideNavBar component={ Authentication } />
                     <Scene key="tabNavigation" hideNavBar component={TabNavigation} />
-                    <Scene key="selectionBoard" hideNavBar component={SelectionBoard} />
+                    <Scene key="selectionBoard" hideNavBar component={SelectionBoard} direction="vertical" />
                     <Scene key="boardBus" hideNavBar component={BoardBus} />
                     <Scene key="login" hideNavBar component={Login} />
+                    <Scene key="finallyBoard" hideNavBar component={FinallyBoard} />
                 </Stack>
             </Router>
         )

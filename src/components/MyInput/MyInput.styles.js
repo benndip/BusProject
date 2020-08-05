@@ -4,12 +4,13 @@ import theme from '../../theme'
 
 const styles = StyleSheet.create({
     container: {
-        width: '92%',
+        width: '95%',
         height: 55,
         marginVertical: 10,
         flexDirection: 'row',
         alignItems: 'center',
         paddingHorizontal: 10,
+        borderRadius: 5,
         backgroundColor:  theme.LIGHT_bLUE,
 
     },

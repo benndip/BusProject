@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, SafeAreaView, Platform } from 'react-native'
+import { View, SafeAreaView,Linking } from 'react-native';
 
 import MapboxGL from '@react-native-mapbox-gl/maps'
 import Geolocation from '@react-native-community/geolocation';
@@ -8,7 +8,7 @@ import styles from './Maps.styles'
 
 MapboxGL.setAccessToken("pk.eyJ1IjoiYmVubmRpcCIsImEiOiJjazRtdWExYWwweHA4M2tuNTljbmxjcjlmIn0.ji9iFK1hYN1sP1H-Kl99Rw");
 
-const IS_ANDROID = Platform.OS === 'android';
+// const IS_ANDROID = Platform.OS === 'android';
 
 
 class Maps extends Component {
@@ -16,26 +16,26 @@ class Maps extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			isAndriodPermissionGranted: false,
-			isFetchingAndroidPermission: IS_ANDROID,
+			// isAndriodPermissionGranted: false,
+			// isFetchingAndroidPermission: IS_ANDROID,
 			showUserLocation: true,
 			latitude: 0.0,
 			longitude: 0.0,
+			error: null
 		}
 
 	}
-
-	async componentDidMount() {
-
-		if (IS_ANDROID) {
-			const isGranted = await MapboxGL.requestAndroidLocationPermissions();
-			this.setState({
-				isAndriodPermissionGranted: isGranted,
-				isFetchingAndroidPermission: true,
-			})
-		};
-
-		MapboxGL.locationManager.start();
+	
+	 async componentDidMount() {
+		
+		
+        // if (IS_ANDROID) {
+		// 	const isGranted = await MapboxGL.requestAndroidLocationPermissions();
+		// 	this.setState({
+		// 		isAndriodPermissionGranted: isGranted,
+		// 		isFetchingAndroidPermission: true,
+		// 	})
+		// };
 		
 		Geolocation.getCurrentPosition(info => {
 			let lat = parseFloat(info.coords.latitude);
@@ -45,8 +45,21 @@ class Maps extends Component {
 				longitude: long
 			});
 			console.log(info)
-		});
+		}, 
+		error=>this.setState({ error: error.message }),
+		{ enableHighAccuracy:true, timeout: 2000, maximumAge: 2000 }
+		
+	);
+
+		 MapboxGL.locationManager.start();
 	}
+
+	componentWillUnmount() {
+		setTimeout(()=>{
+			MapboxGL.locationManager.start();
+		},0.00000000000001)
+		
+	  }
 
 	onUserLocationUpdate(location) {
 		this.setState({
@@ -61,7 +74,7 @@ class Maps extends Component {
 				<View style={styles.container}>
 					<MapboxGL.MapView
 						ref={c => (this._map = c)}
-						zoomLevel={10}
+						zoomLevel={14}
 						onUserLocationUpdate={this.onUserLocationUpdate}
 						centerCoordinate={[this.state.longitude, this.state.latitude][0]}
 						style={styles.container}
@@ -69,31 +82,25 @@ class Maps extends Component {
 						userTrackingMode={MapboxGL.UserTrackingModes.Follow}
 					>
 						<MapboxGL.Camera
-							zoomLevel={10}
+							zoomLevel={14}
 							animationMode={'flyTo'}
 							animationDuration={2000}
 							ref={c => (this.camera = c)}
 							centerCoordinate={[this.state.longitude, this.state.latitude]}
 						/>
-						<MapboxGL.PointAnnotation
+						{/*<MapboxGL.PointAnnotation
 							id="yes"
 							title="Buea"
 							draggable
 							snippet="ok"
-							coordinate={[9.3,4.2]}
-						/>
-						<MapboxGL.PointAnnotation
-							id="no"
-							title="Btrue"
-							draggable
-							snippet="om"
-							coordinate={[9.3456678,4.2]}
-						/>
+							coordinate={[this.state.longitude, this.state.latitude]}
+						/>*/}
 						<MapboxGL.UserLocation 
 							onPress={()=>{alert(this.state.latitude,this.state.latitude)}}
 							showsUserHeadingIndicator
-							/>
-					</MapboxGL.MapView>
+							animated
+						/>
+						</MapboxGL.MapView>
 					</View>
 			</SafeAreaView>
 		)
